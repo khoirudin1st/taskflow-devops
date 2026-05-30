@@ -19,6 +19,10 @@ Task management application built with Node.js, PostgreSQL, Docker, Monitoring, 
 
 ## Tech Stack
 
+### Architecture
+
+![Architecture](docs/architecture/taskflow-devops-architecture.png)
+
 ### Backend
 
 - Node.js

@@ -31,5 +31,30 @@ services:
     depends_on:
       - postgres
 
+  prometheus:
+    image: prom/prometheus
+
+    container_name: taskflow-prometheus
+
+    ports:
+      - "9090:9090"
+
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+
+    depends_on:
+      - backend
+
+  grafana:
+    image: grafana/grafana
+
+    container_name: taskflow-grafana
+
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      - prometheus
+
 volumes:
   postgres_data:

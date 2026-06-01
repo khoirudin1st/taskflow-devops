@@ -9,26 +9,25 @@ import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-     <div
-        style={{
-          minHeight: "100vh",
-          background:
-            "background-color: #f5f5f5;",
-        }}
-      >
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={<Login />}
-        />
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#f5f6fa",
+      }}
+    >
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<Login />}
+          />
 
-        <Route
-          path="/dashboard"
-          element={<Dashboard />}
-        />
-      </Routes>
-    </BrowserRouter>
+          <Route
+            path="/dashboard"
+            element={<Dashboard />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

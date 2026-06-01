@@ -9,6 +9,9 @@ Task management application built with Node.js, PostgreSQL, Docker, Monitoring, 
 - JWT Authentication
 - Protected Routes
 - Task CRUD Operations
+- React Frontend
+- Dashboard UI
+- Logout Functionality
 - PostgreSQL Database
 - Docker Containerization
 - Prometheus Monitoring
@@ -22,6 +25,13 @@ Task management application built with Node.js, PostgreSQL, Docker, Monitoring, 
 ### Architecture
 
 ![Architecture](docs/architecture/taskflow-devops-architecture.png)
+
+### Frontend
+
+- React
+- React Router DOM
+- Axios
+- Bootstrap
 
 ### Backend
 
@@ -38,6 +48,7 @@ Task management application built with Node.js, PostgreSQL, Docker, Monitoring, 
 - Prometheus
 - Grafana
 - GitHub Actions
+- Railway
 
 ---
 
@@ -82,6 +93,11 @@ taskflow-devops/
 | DELETE | /api/tasks/:id | Delete Task |
 
 ---
+## Deployment
+
+Application deployed using Railway:
+
+https://taskflow-devops-production.up.railway.app
 
 ## Monitoring
 
@@ -93,9 +109,9 @@ http://localhost:5000/metrics
 
 ### Grafana
 
-Dashboard available at:
+### Dashboard UI
 
-http://localhost:3000
+![Dashboard](docs/screenshots/23-frontend-dashboard-crud.png)
 
 ---
 

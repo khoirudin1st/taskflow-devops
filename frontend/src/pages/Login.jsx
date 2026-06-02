@@ -9,6 +9,8 @@ function Login() {
     e.preventDefault();
 
     try {
+      console.log(email);
+      console.log(password);
       const response = await api.post("/auth/login", {
         email,
         password,
@@ -31,39 +33,49 @@ function Login() {
   };
 
   return (
-    <div className="card shadow-lg">
-      <h1>Login</h1>
+  <div className="container d-flex justify-content-center align-items-center vh-100">
+    <div
+      className="card p-4 shadow-lg"
+      style={{
+        width: "400px",
+        backgroundColor: "#1f2937",
+        color: "white",
+        border: "none",
+        borderRadius: "15px",
+      }}
+    >
+      <h2 className="text-center mb-4">
+        TaskFlow DevOps 🚀
+      </h2>
 
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) =>
-            setEmail(e.target.value)
-          }
-        />
+      <input
+        type="email"
+        placeholder="Email"
+        className="form-control mb-3"
+        value={email}
+        onChange={(e) =>
+          setEmail(e.target.value)
+        }
+      />
 
-        <br />
-        <br />
-
-        <input
-          type="password"
-          placeholder="Password"
+      <input
+        type="password"
+        placeholder="Password"
+        className="form-control mb-3"
           value={password}
-          onChange={(e) =>
-            setPassword(e.target.value)
-          }
-        />
+        onChange={(e) =>
+          setPassword(e.target.value)
+        }
+      />
 
-        <br />
-        <br />
-
-        <button type="submit">
-          Login
-        </button>
-      </form>
+        <button
+        className="btn btn-primary w-100"
+        onClick={handleLogin}
+        >
+        Login
+      </button>
     </div>
+  </div>
   );
 }
 

@@ -12,7 +12,7 @@ function App() {
     <div
       style={{
         minHeight: "100vh",
-        backgroundColor: "#111827",
+        backgroundColor: "#f5f6fa",
       }}
     >
       <BrowserRouter>

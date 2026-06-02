@@ -126,7 +126,7 @@ function Dashboard() {
   };
 
   return (
-    <div className="container mt-4"v>
+    <div className="container py-5 text-light mt-4">
       <h1 className="mb-4">
         Task Dashboard 🚀
       </h1>
@@ -168,7 +168,7 @@ function Dashboard() {
       {editingId ? (
       <button
         className="btn btn-primary"
-        onClick={createTask}
+        onClick={updateTask}
       >
         Update Task
       </button>
@@ -189,42 +189,46 @@ function Dashboard() {
         ) : (
           <ul>
             {tasks.map((task) => (
-              <div
-                key={task.id}
-                className="card mb-3">
-                <div className="card-body">
-                  <strong>{task.title}</strong>
+            <div
+              key={task.id}
+              className="card mb-3"
+              style={{
+                backgroundColor: "#1f2937",
+                border: "1px solid #374151",
+                borderRadius: "12px",
+              }}
+            >
+              <div className="card-body text-light">
+                <strong>{task.title}</strong>
 
-                  <br />
+                <br />
 
-                  {task.description}
+                {task.description}
 
-                  <br />
+                <br />
 
-                  <button
-                    className="btn btn-warning btn-sm me-2"
-                    onClick={() => {
-                      setEditingId(task.id);
-                      setTitle(task.title);
-                      setDescription(task.description);
-                    }}
-                  >
-                    Edit
-                  </button>
+                <button
+                  className="btn btn-warning btn-sm me-2"
+                  onClick={() => {
+                    setEditingId(task.id);
+                    setTitle(task.title);
+                    setDescription(task.description);
+                  }}
+                >
+                  Edit
+                </button>
 
-                  {" "}
+                <button
+                  className="btn btn-danger btn-sm"
+                  onClick={() => deleteTask(task.id)}
+                >
+                  Hapus
+                </button>
 
-                  <button
-                    className="btn btn-danger btn-sm"
-                    onClick={() => deleteTask(task.id)}
-                  >
-                    Hapus
-                  </button>
-
-                  <hr />
-                </div>
+                <hr />
               </div>
-            ))}
+            </div>
+))}
           </ul>
         )}
 

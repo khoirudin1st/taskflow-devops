@@ -101,15 +101,20 @@ https://taskflow-devops-production.up.railway.app
 
 ## Monitoring
 
-### Prometheus
+Monitoring dilakukan menggunakan Prometheus dan Grafana.
 
-Application metrics exposed through:
+### Prometheus Data Source
 
-http://localhost:5000/metrics
+![Prometheus Connected](docs/screenshots/16-prometheus-datasource-connected.png)
 
-### Grafana
+### Grafana Monitoring Dashboard
 
-Dashboard monitoring available through Grafana.
+![Grafana Monitoring](docs/screenshots/24-grafana-monitoring-dashboard.png)
+
+Metrics yang dimonitor:
+- Backend Status
+- CPU Usage
+- Memory Usage.
 
 ---
 
